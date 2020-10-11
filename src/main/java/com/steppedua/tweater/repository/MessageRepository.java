@@ -1,6 +1,6 @@
-package com.steppedua.sweater.repository;
+package com.steppedua.tweater.repository;
 
-import com.steppedua.sweater.model.Message;
+import com.steppedua.tweater.model.Message;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

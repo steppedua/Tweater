@@ -1,6 +1,6 @@
-package com.steppedua.sweater.repository;
+package com.steppedua.tweater.repository;
 
-import com.steppedua.sweater.model.User;
+import com.steppedua.tweater.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

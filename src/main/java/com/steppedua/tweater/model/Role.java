@@ -1,4 +1,4 @@
-package com.steppedua.sweater.model;
+package com.steppedua.tweater.model;
 
 import org.springframework.security.core.GrantedAuthority;
 

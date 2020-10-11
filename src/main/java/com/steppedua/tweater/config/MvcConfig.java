@@ -1,4 +1,4 @@
-package com.steppedua.sweater.config;
+package com.steppedua.tweater.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

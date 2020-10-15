@@ -22,9 +22,6 @@ public class User implements UserDetails {
 
     private String password;
 
-    @Transient
-    private String password2;
-
     private boolean active;
 
     @Email(message = "Email is not correct")

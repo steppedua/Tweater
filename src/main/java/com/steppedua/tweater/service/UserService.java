@@ -4,6 +4,7 @@ import com.steppedua.tweater.model.Role;
 import com.steppedua.tweater.model.User;
 import com.steppedua.tweater.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -47,7 +48,6 @@ public class UserService implements UserDetailsService {
         user.setRoles(Collections.singleton(Role.USER));
         user.setActivationCode(UUID.randomUUID().toString());
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-//        user.setPassword2(passwordEncoder.encode(user.getPassword()));
 
         userRepository.save(user);
 
@@ -60,7 +60,7 @@ public class UserService implements UserDetailsService {
         if (!StringUtils.isEmpty(user.getEmail())) {
             String message = String.format(
                     "Hello, %s! \n" +
-                            "Welcome to Sweater. Please, visit next link: http://localhost:8080/activate/%s",
+                            "Welcome to Sweater. Please, visit next link: https://tweater-stepa.herokuapp.com/activate/%s",
                     user.getUsername(),
                     user.getActivationCode()
             );
@@ -125,7 +125,6 @@ public class UserService implements UserDetailsService {
 
         if (StringUtils.isEmpty(password)) {
             user.setPassword(passwordEncoder.encode(password));
-//            user.setPassword2(passwordEncoder.encode(password));
         }
 
         userRepository.save(user);

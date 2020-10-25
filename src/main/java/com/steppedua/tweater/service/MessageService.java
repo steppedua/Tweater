@@ -1,6 +1,5 @@
 package com.steppedua.tweater.service;
 
-import com.steppedua.tweater.model.Message;
 import com.steppedua.tweater.model.User;
 import com.steppedua.tweater.model.dto.MessageDto;
 import com.steppedua.tweater.repository.MessageRepository;
